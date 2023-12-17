@@ -40,7 +40,6 @@ header {
   background-image: url(../img/Cartoon_Forest_BG_01/Cartoon_Forest_BG_01.png);
   background-position: center;
   background-size: contain;
-  background-repeat: repeat-x;
   position: relative;
 }
 
@@ -48,7 +47,6 @@ header {
 .loosepicture {
   position: absolute;
   top: -80%;
-  opacity: 0;
   visibility: hidden;
 }
 .winpictureon {
