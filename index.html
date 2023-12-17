@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schere, Stein, Papier</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Output Anzeige der Fenstergröße unten links -->
+      
+      <nav>
+        <!-- Outputcontainer der Wins des Users -->
+        <div class="usernav">
+          <h2>DU</h2>
+          <h2 class="outputuser">0</h2>
+        </div>
+        <!-- Outputcontainer der gespielten Runden -->
+        <div class="gamenav">
+          <h2>RUNDE</h2>
+          <h2 class="roundscontainervalues"></h2>
+        </div>
+        <!-- Outputcontainer der Wins des PCs -->
+        <div class="pcnav">
+          <h2>PC</h2>
+          <h2 class="outputcomputer">0</h2>
+        </div>
+      </nav>
+      <section class="menu">
+        <div class="splashscreen">
+          <!--  -->
+          <img src="./assets/img/gui/you_win/bg.png" alt="" />
+          <img
+            src="./assets/img/gui/you_win/header.png"
+            alt=""
+            class="winpicture"
+          />
+          <img
+            src="./assets/img/gui/you_lose/header.png"
+            alt=""
+            class="loosepicture"
+          />
+          <img
+            src="./assets/img/gui/level_select/header.png"
+            alt=""
+            class="roundselect"
+          />
+          <section class="outputrounds">
+            <h2>Wieviele Runden willst du spielen?</h2>
+            <div class="roundscontainer">
+              <div class="rounds">
+                <input type="radio" name="numrounds" id="rounds5" value="5" />
+                <label for="radio">5</label>
+              </div>
+              <div class="rounds">
+                <input type="radio" name="numrounds" id="rounds10" value="10" />
+                <label for="radio">10</label>
+              </div>
+              <div class="rounds">
+                <input type="radio" name="numrounds" id="rounds15" value="15" />
+                <label for="radio">15</label>
+              </div>
+              <div class="rounds">
+                <input type="radio" name="numrounds" id="rounds20" value="20" />
+                <label for="radio">20</label>
+              </div>
+            </div>
+          </section>
+          <button class="startgame" onclick="startGame()">
+            <img src="./assets/img/gui/menu/play.png" alt="" />
+          </button>
+          <button class="resetbutton" onClick="window.location.reload();">
+            <img src="./assets/img/gui/btn/restart.png" alt="" />
+          </button>
+        </div>
+        <div class="winloosepic-off">
+          <p class="winner"></p>
+          <p class="output"></p>
+        </div>
+        <div class="gamecountdown">
+          <p class="scissortxt">SCHERE</p>
+          <p class="stonetxt">STEIN</p>
+          <p class="papertxt">PAPIER</p>
+        </div>
+        <div class="handcontainer">
+          <img
+            src="./assets/img/hands/rock_user.png"
+            alt=""
+            class="userhandchoice"
+          />
+          <img
+            src="./assets/img/hands/rock_pc.png"
+            alt=""
+            class="pchandchoice"
+          />
+        </div>
+        <div class="charactercontainer">
+          <img class="userchar" src="./assets/img/User_Idle_250ms.gif" alt="" />
+          <img class="pcchar" src="./assets/img/PC_Idle_250ms.gif" alt="" />
+        </div>
+      </section>
+      <div class="btncontainerchoices">
+        <input
+          onclick="startPlaying(scissor)"
+          type="button"
+          value="schere"
+          id="scissor"
+        />
+        <input
+          onclick="startPlaying(stone)"
+          type="button"
+          value="stein"
+          id="stone"
+        />
+        <input
+          onclick="startPlaying(paper)"
+          type="button"
+          value="papier"
+          id="paper"
+        />
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>
